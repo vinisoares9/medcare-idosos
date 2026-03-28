@@ -1,7 +1,9 @@
-frequencias_validas = ["diaria", "semanal", "mensal"]
+FREQUENCIAS_VALIDAS = ["diaria", "semanal", "mensal"]
 
 
-def criar_medicamento(nome, paciente, horario, frequencia, estoque, observacoes=None, id=None):
+def criar_medicamento(
+    nome, paciente, horario, frequencia, estoque, observacoes=None, id=None
+):
     return {
         "id": id,
         "nome": nome,
