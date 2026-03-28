@@ -30,17 +30,17 @@ def menu_principal():
 
 def exibir_medicamento(med):
     if med["estoque"] < 5:
-        alerta = " ⚠️ ESTOQUE BAIXO!"
+        alerta = " ⚠️  ESTOQUE BAIXO!"
     else:
-        alerta = ''
-    print(f'\n ID         : {med['id']}')
-    print(f' Nome       : {med['nome']}')
-    print(f' Paciente   : {med['paciente']}')
-    print(f' Horário    : {med['horario']}')
-    print(f' Frequência : {med['frequencia']}')
-    print(f' Estoque    : {med['estoque']} unidade(s){alerta}')
-    if med['observacoes']:
-        print(f' Obs.       : {med['observacoes']}')
+        alerta = ""
+    print(f"\n  ID        : {med['id']}")
+    print(f"  Nome      : {med['nome']}")
+    print(f"  Paciente  : {med['paciente']}")
+    print(f"  Horário   : {med['horario']}")
+    print(f"  Frequência: {med['frequencia']}")
+    print(f"  Estoque   : {med['estoque']} unidade(s){alerta}")
+    if med["observacoes"]:
+        print(f"  Obs.      : {med['observacoes']}")
 
 
 def cadastrar():
