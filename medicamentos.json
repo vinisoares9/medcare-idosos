@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Keppra",
+    "paciente": "Vinicius Soares",
+    "horario": "19:00",
+    "frequencia": "diaria",
+    "estoque": 150,
+    "observacoes": "Tomar 3 cps de 12 em 12 horas."
+  },
+  {
+    "id": 2,
+    "nome": "Depakote",
+    "paciente": "Vinicius Soares",
+    "horario": "20:20",
+    "frequencia": "diaria",
+    "estoque": 50,
+    "observacoes": "Tomar 2 cps de manhã e 3 de noite."
+  },
+  {
+    "id": 3,
+    "nome": "Osteoporona",
+    "paciente": "Maria Creuza",
+    "horario": "17:15",
+    "frequencia": "mensal",
+    "estoque": 4,
+    "observacoes": null
+  },
+  {
+    "id": 5,
+    "nome": "Dipirona",
+    "paciente": "Leila Pereira",
+    "horario": "13:00",
+    "frequencia": "semanal",
+    "estoque": 2,
+    "observacoes": "Tomar apenas se sentir dor durante a semana."
+  }
+]
