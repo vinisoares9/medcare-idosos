@@ -1,4 +1,4 @@
-FREQUENCIAS_VALIDAS = ["diaria", "semanal", "mensal"]
+frequencias_validas = ["diaria", "semanal", "mensal"]
 
 
 def criar_medicamento(
