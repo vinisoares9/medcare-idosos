@@ -15,4 +15,4 @@ Todas as mudanças notáveis neste projeto serão documentadas aqui.
 - Interface CLI interativa com menu numerado
 - Testes automatizados com pytest
 - Lint configurado com flake8
-- Pipeline de CI com GitHub Actions 
+- Pipeline de CI com GitHub Actions
