@@ -1,4 +1,3 @@
-# repositorio.py
 import json
 import os
 from medcare.models import criar_medicamento
