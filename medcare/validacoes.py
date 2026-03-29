@@ -49,4 +49,3 @@ def validar_estoque(estoque):
     if estoque < 0:
         raise ValueError("Estoque não pode ser negativo.")
     return estoque
-

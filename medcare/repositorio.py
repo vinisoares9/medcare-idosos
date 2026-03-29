@@ -98,4 +98,3 @@ def alertas_estoque_baixo(limite=5, caminho=arquivo_padrao):
         if med["estoque"] < limite:
             resultado.append(med)
     return resultado
-
