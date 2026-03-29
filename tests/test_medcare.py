@@ -136,3 +136,4 @@ def test_alertas_estoque_baixo(arquivo_temp):
     alertas = repositorio.alertas_estoque_baixo(caminho=arquivo_temp)
     assert len(alertas)
     assert alertas[0]["nome"] == "Med A"
+
