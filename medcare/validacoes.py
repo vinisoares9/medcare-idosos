@@ -1,4 +1,3 @@
-# validacoes.py
 from medcare.models import frequencias_validas
 
 
