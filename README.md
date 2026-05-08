@@ -2,6 +2,19 @@
 
 ![CI](https://github.com/vinisoares9/medcare-idosos/actions/workflows/ci.yml/badge.svg)
 
+## 🌐 Deploy
+
+Esta aplicação é uma CLI (linha de comando) e pode ser executada
+diretamente em qualquer máquina com Python 3.10+.
+
+**Executar sem instalar:**
+```bash
+pip install -r requirements.txt
+python main.py
+```
+
+> Repositório público: https://github.com/vinisoares9/medcare-idosos
+
 ## Problema Real
 
 O Brasil possui mais de 32 milhões de idosos, muitos deles com doenças crônicas que exigem o uso contínuo de múltiplos medicamentos. A dificuldade de controlar horários, frequências e estoques de remédios é uma realidade para idosos e seus cuidadores, podendo causar esquecimentos, doses erradas ou falta de medicamentos.
