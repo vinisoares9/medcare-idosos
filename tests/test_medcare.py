@@ -136,3 +136,23 @@ def test_alertas_estoque_baixo(arquivo_temp):
     alertas = repositorio.alertas_estoque_baixo(caminho=arquivo_temp)
     assert len(alertas)
     assert alertas[0]["nome"] == "Med A"
+
+
+def test_buscar_cep_valido():
+    from medcare.viacep import buscar_cep
+    resultado = buscar_cep('70832050')
+    assert resultado is not None
+    assert resultado['cidade'] == 'Brasília'
+    assert resultado['estado'] == 'DF'
+
+
+def test_buscar_cep_invalido():
+    from medcare.viacep import buscar_cep
+    resultado = buscar_cep('00000000')
+    assert resultado is None
+
+
+def test_buscar_cep_formato_errado():
+    from medcare.viacep import buscar_cep
+    resultado = buscar_cep('abc')
+    assert resultado is None

@@ -5,6 +5,7 @@ from medcare.validacoes import (
     validar_frequencia,
     validar_estoque,
 )
+from medcare.viacep import buscar_cep
 
 linha = "=" * 55
 linha_fina = "-" * 55
@@ -36,6 +37,8 @@ def exibir_medicamento(med):
     print(f"\n  ID        : {med['id']}")
     print(f"  Nome      : {med['nome']}")
     print(f"  Paciente  : {med['paciente']}")
+    if med.get('cidade'):
+        print(f"  Cidade    : {med['cidade']}")
     print(f"  Horário   : {med['horario']}")
     print(f"  Frequência: {med['frequencia']}")
     print(f"  Estoque   : {med['estoque']} unidade(s){alerta}")
@@ -53,6 +56,15 @@ def cadastrar():
         frequencia = validar_frequencia(input(' Frequência (diaria/semanal/mensal): '))
         estoque = validar_estoque(input(' Quantidade em estoque: '))
         obs = input(' Observações (opicional, Enter para pular): ').strip()
+        cep_raw = input(' CEP do paciente (opicional, Enter para pular): ').strip()
+        cidade = ''
+        if cep_raw:
+            resultado = buscar_cep(cep_raw)
+            if resultado:
+                cidade = f'{resultado['cidade']} - {resultado['estado']}'
+                print(f' 📍 Cidade encontrada: {cidade}')
+            else:
+                print(' ⚠️ CEP não encontrado, continuando sem cidade.')
 
         med = repositorio.adicionar(
             nome=nome,
@@ -61,6 +73,7 @@ def cadastrar():
             frequencia=frequencia,
             estoque=estoque,
             observacoes=obs if obs else None,
+            cidade=cidade if cidade else None,
         )
         print(f'\n✅ Medicamento cadastrado com sucesso! (ID: {med['id']})')
 
