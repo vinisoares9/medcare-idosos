@@ -2,7 +2,7 @@ frequencias_validas = ["diaria", "semanal", "mensal"]
 
 
 def criar_medicamento(
-    nome, paciente, horario, frequencia, estoque, observacoes=None, id=None
+    nome, paciente, horario, frequencia, estoque, observacoes=None, id=None, cidade=None
 ):
     return {
         "id": id,
@@ -12,6 +12,7 @@ def criar_medicamento(
         "frequencia": frequencia,
         "estoque": estoque,
         "observacoes": observacoes,
+        'cidade': cidade,
     }
 
 

@@ -29,7 +29,7 @@ def _proximo_id(lista):
 
 
 def adicionar(nome, paciente, horario, frequencia, estoque,
-              observacoes=None, caminho=arquivo_padrao):
+              observacoes=None, cidade=None, caminho=arquivo_padrao):
     lista = _carregar_dados(caminho)
     novo = criar_medicamento(
         id=_proximo_id(lista),
@@ -39,6 +39,7 @@ def adicionar(nome, paciente, horario, frequencia, estoque,
         frequencia=frequencia,
         estoque=estoque,
         observacoes=observacoes,
+        cidade=cidade,
     )
 
     lista.append(novo)
